@@ -1,7 +1,7 @@
 # Documentation Folder
 | Document | Description |
 |---|---|
-| Proposal |  |
+| Project Plan |  |
 | Architecture | |
 | Detailed Design | |
 | Installation Guide| |
