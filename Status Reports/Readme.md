@@ -1,7 +1,10 @@
 # Status Reports Folder
 Weekly/bi-weekly status reports go into this folder
+
 Project Plan Template: https://github.com/openmainframeproject-internship/resources/blob/master/forms/project_plan.md
-Status Report Template: 
+
+Status Report Template: https://github.com/openmainframeproject-internship/resources/blob/master/forms/Weekly%20Project%20Status.docx
+
 | Document | Description | Document Name |
 |---|---|---|
 | Project Plan | Overall week by week plan of milestones | |
@@ -19,3 +22,9 @@ Status Report Template:
 | Week 12 Status Report | | |
 | Week 13 Status Report | | |
 | Week 14 Status Report | | |
+| Week 15 Status Report | | |
+| Week 16 Status Report | | |
+| Week 17 Status Report | | |
+| Week 18 Status Report | | |
+| Week 19 Status Report | | |
+| Week 20 Status Report | | |
