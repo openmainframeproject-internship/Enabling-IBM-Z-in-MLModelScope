@@ -3,7 +3,7 @@ Weekly/bi-weekly status reports go into this folder
 | Document | Description | Document Name |
 |---|---|---|
 | Project Plan | Overall week by week plan of milestones | |
-| Week 1 Status Report | | |
+| Week 1 Status Report | | | Visit: 
 | Week 2 Status Report | | |
 | Week 3 Status Report | | |
 | Week 4 Status Report | | |
