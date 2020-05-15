@@ -14,7 +14,7 @@ a better understanding of the problems you encountered during the developmemnt o
 
 ## Project Team
 - Hong Min - IBM - Mentor
-- Priyanshu Khandelwal - *University* - Mentee
+- Priyanshu Khandelwal - Indian Institute of Technology Mandi (IIT Mandi) - Mentee
 
 ## Deliverables:
 - [ ] Project Plan
