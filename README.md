@@ -14,6 +14,8 @@ a better understanding of the problems you encountered during the developmemnt o
 
 ## Project Team
 - Hong Min - IBM - Mentor
+- Jinjun Xiong - IBM - Mentor
+- Petr Novotny - IBM - Mentor
 - Priyanshu Khandelwal - Indian Institute of Technology Mandi (IIT Mandi) - Mentee
 
 ## Deliverables:
