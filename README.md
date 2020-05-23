@@ -19,7 +19,7 @@ a better understanding of the problems you encountered during the developmemnt o
 - Priyanshu Khandelwal - Indian Institute of Technology Mandi (IIT Mandi) - Mentee
 
 ## Deliverables:
-- [ ] Project Plan
+- [X] **Project Plan**
 - [ ] 1st Stipend Released
 - [ ] Statement of Work
 - [ ] Architecure/High Level Design
