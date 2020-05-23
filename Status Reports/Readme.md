@@ -7,7 +7,7 @@ Status Report Template: https://github.com/openmainframeproject-internship/resou
 
 | Document | Description | Document Name |
 |---|---|---|
-| Project Plan | Overall week by week plan of milestones | |
+| Project Plan | Overall week by week plan of milestones | [Project Plan](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Status%20Reports/project_plan.md) |
 | Week 1 Status Report | | | 
 | Week 2 Status Report | | |
 | Week 3 Status Report | | |
