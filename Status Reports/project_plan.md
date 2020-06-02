@@ -18,7 +18,7 @@ Our main goal is to validate the support of zLinux as a backend for MLModelScope
 | Week | Tasks | Goals |
 |------|-------|-------|
 Week 1 (Start 24th April) | Go through the documentation for with MLModelscope and set up the development environment | Get familiar with the project
-Week 2 | Try to set up the Tensorflow agent on Z | Analyze the libraries that block the installation of the Pytorch/MxNet agent on Z
+Week 2 | Try to set up the Tensorflow agent on Z | Analyze the libraries that block the installation of the Tensorflow agent on Z
 Week 3-4 | Identify any libraries which are a dependency in Tensorflow agent but are not compatible with s390x architecture | Analyze the libraries that block the installation of the agent on Z.
 Week 5-6 | Develop possible fixes for the identified packages and build the binary for the Tensorflow agent | Ensure the Tensorflow agent is able to build on Z
 Week 7 | Try to set up the PyTorch/MxNet agent on Z, identify blockers in the installation of PyTorch/MxNet | Analyze the libraries that block the installation of the PyTorch/MxNet agent on Z
