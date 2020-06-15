@@ -13,8 +13,8 @@ Status Report Template: https://github.com/openmainframeproject-internship/resou
 | Week 3 Status Report | Work done in Week 3 | [Report](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Status%20Reports/project_status_week_3.docx) |
 | Week 4 Status Report | Work done in Week 4 | [Report](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Status%20Reports/project_status_week_4.docx) |
 | Week 5 Status Report | Work done in Week 5 | [Report](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Status%20Reports/project_status_week_5.docx) |
-| Week 6 Status Report | Work done in Week 5 | [Report](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Status%20Reports/project_status_week_6.docx) |
-| Week 7 Status Report | Work done in Week 5 | [Report](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Status%20Reports/project_status_week_7.docx) |
+| Week 6 Status Report | Work done in Week 6 | [Report](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Status%20Reports/project_status_week_6.docx) |
+| Week 7 Status Report | Work done in Week 7 | [Report](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Status%20Reports/project_status_week_7.docx) |
 | Week 8 Status Report | | |
 | Week 9 Status Report | | |
 | Week 10 Status Report | | |
