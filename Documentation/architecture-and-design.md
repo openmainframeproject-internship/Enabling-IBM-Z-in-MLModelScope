@@ -1,4 +1,4 @@
-## Architecture for MLModelScope
+## Architecture and Design of the project
 
 The architecture of MLModelScope is shown below - ![](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Documentation/mlmodelscope-arch.png)
 
