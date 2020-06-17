@@ -21,9 +21,9 @@ a better understanding of the problems you encountered during the developmemnt o
 ## Deliverables:
 - [X] **Project Plan**
 - [ ] 1st Stipend Released
-- [ ] Statement of Work
-- [ ] Architecure/High Level Design
-- [ ] Detailed Design
+- [x] Statement of Work
+- [x] Architecure/High Level Design
+- [x] Detailed Design
 - [ ] 2nd Stipend Released
 - [ ] Mid-term Evaluation (by mentor)
 - [ ] Code Project (with comments)
