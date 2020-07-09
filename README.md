@@ -25,7 +25,7 @@ a better understanding of the problems you encountered during the developmemnt o
 - [x] Architecure/High Level Design
 - [x] Detailed Design
 - [ ] 2nd Stipend Released
-- [ ] Mid-term Evaluation (by mentor)
+- [x] Mid-term Evaluation (by mentor)
 - [ ] Code Project (with comments)
 - [ ] Testing
 - [ ] Video Presentation of the Project
