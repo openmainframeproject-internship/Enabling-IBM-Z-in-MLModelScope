@@ -28,8 +28,6 @@ index d6782ba9422..aa31b8d8296 100644
 -        method only saves parameters, not model structure. If you want to save
 -        model structures, please use :py:meth:`HybridBlock.export`.
 +        Saved parameters can be loaded with `load_parameters` or numpy.load.
-+        Note that this method only saves parameters, not model structure. If
-+        you want to save model structures, please use :py:meth:`HybridBlock.export`.
  
          Parameters
          ----------
@@ -115,8 +113,6 @@ index d6782ba9422..aa31b8d8296 100644
 +            loaded = {n: (p if not isinstance(p, str) else loaded[p]) for n, p in loaded.items()}
 +        else:  # Try MXNet deprecated format
 +            if is_np_array():
-+                # failure may happen when loading parameters saved as NDArrays within
-+                # NumPy semantics. Check the failure type and recover from it if it happens.
 +                try:
 +                    loaded = _mx_npx.load(filename)
 +                except MXNetError as e:
