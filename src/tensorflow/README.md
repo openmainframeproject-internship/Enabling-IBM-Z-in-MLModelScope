@@ -12,5 +12,5 @@ We created a fix that traverses the entire graph in the frozen model, unwraps th
 # Files
 | Folder | Description |
 |---|---|
-| ByteSwap_Tensorflow.ipynb | Python notebook to byteswap the tensors in Tensorflow Frozen model graph |
-| docs-tensorflow-agent.md | Documentation to install Tensorflow package, MlModelScope Tensorflow agent on Z |
+| (ByteSwap_Tensorflow.ipynb)[https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/src/tensorflow/ByteSwap_Tensorflow.ipynb] | Python notebook to byteswap the tensors in Tensorflow Frozen model graph |
+| (docs-tensorflow-agent.md)[https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Documentation/docs-tensorflow-agent.md] | Documentation to install Tensorflow package, MlModelScope Tensorflow agent on Z |
