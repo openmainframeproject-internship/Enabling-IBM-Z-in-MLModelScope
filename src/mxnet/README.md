@@ -13,6 +13,6 @@ We created a fix to make the serialization format of MXNet Gluon model endian in
 # Files
 | Folder | Description |
 |---|---|
-| MXNet_Fix.ipynb | Python notebook to install MXNet package from source and applying our patch to it |
-| bigendian.patch | Patch file for making MXNet serialization ednian independent |
-| docs-mxnet-agent.md | Documentation to install MXNet package, MlModelScope MXNet agent on Z |
+| [MXNet_Fix.ipynb](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/src/mxnet/MXNet_Fix.ipynb) | Python notebook to install MXNet package from source and applying our patch to it |
+| [bigendian.patch](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/src/mxnet/bigendian.patch) | Patch file for making MXNet serialization ednian independent |
+| [docs-mxnet-agent.md](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/blob/master/Documentation/docs-mxnet-agent.md) | Documentation to install MXNet package, MlModelScope MXNet agent on Z |
