@@ -25,8 +25,7 @@ index d6782ba9422..aa31b8d8296 100644
 +        """Save parameters to file based on numpy .npz format.
  
 -        Saved parameters can only be loaded with `load_parameters`. Note that this
--        method only saves parameters, not model structure. If you want to save
--        model structures, please use :py:meth:`HybridBlock.export`.
+-        method only saves parameters, not model structure.
 +        Saved parameters can be loaded with `load_parameters` or numpy.load.
  
          Parameters
