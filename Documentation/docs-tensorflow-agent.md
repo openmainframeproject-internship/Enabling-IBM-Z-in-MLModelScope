@@ -1,6 +1,6 @@
 # Installation guide for Tensorflow Agent
 
-Use this guide to install Tensorflow agent on zLinux (s390x architecture). Tested on `Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-96-generic s390x)`. Tested on Ubuntu 18.04 [docker image](https://hub.docker.com/r/s390x/ubuntu/) for s390x.
+Use this guide to install Tensorflow agent on zLinux (s390x architecture). Tested on `Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-96-generic s390x)` [docker image](https://hub.docker.com/r/s390x/ubuntu/).
 
 ## Installing dependencies
 
