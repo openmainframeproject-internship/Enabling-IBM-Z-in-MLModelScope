@@ -1,12 +1,12 @@
 # Installation guide for MXNet Agent
 
-Use this guide to install MXNet agent on zLinux (s390x architecture). Tested on `Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-96-generic s390x)`
+Use this guide to install MXNet agent on zLinux (s390x architecture). Tested on `Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-96-generic s390x)` [docker image](https://hub.docker.com/r/s390x/ubuntu/).
 
 ## Installing dependencies
 
 ### Installing Go
 
-1. Download the Go binary and install it on the system. Please note that we'll be using Go version 1.13.10 as it is verified to support mxnet agent on zLinux.`
+1. Download the Go binary and install it on the system. Please note that we'll be using Go version 1.13.10 as it is the current supported version by the MXNet agent.`
 
     ```
     wget https://dl.google.com/go/go1.13.10.linux-s390x.tar.gz
@@ -55,10 +55,10 @@ Use this guide to install MXNet agent on zLinux (s390x architecture). Tested on 
 1. Clone MXNet github repository
 
     ```
-    git clone --single-branch --depth 1 --branch $FRAMEWORK_VERSION --recursive https://github.com/apache/incubator-mxnet mxnet
+    git clone --single-branch --depth 1 --branch v1.6.x --recursive https://github.com/apache/incubator-mxnet mxnet
     ```
 
-2. We'll be using `make` to compile the library. This requires setting the multiple configuration options avaliable under make/config.mk. Use the following command to install the library
+2. We'll be using `make` to compile the library. This requires setting the multiple configuration options avaliable under `make/config.mk`. Use the following set the required environment variables and then install the library
 
     ```
     cd mxnet && \
@@ -94,13 +94,22 @@ Use this guide to install MXNet agent on zLinux (s390x architecture). Tested on 
 
 ## Configuring rai-project/go-mxnet
 
-1. There is a header file missing in `mxnet/error.go`, `mxnet/predictor.go`, `mxnet/ndarray.go` that causes multiple build failures. To avoid them, add the following header in these files
+MlModelScope uses chewxy/math32 package as a dependency but it fails to work on IBM Z. So, we pushed a fix to make it work on s390x architecture. The details about this change is available here [here](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/tree/master/src/math32).
+
+1. Get the MXNet Go bindings
+
+   ```
+   go get https://github.com/rai-project/go-mxnet
+   ```
+
+2. There is a header file missing in `mxnet/error.go`, `mxnet/predictor.go`, `mxnet/ndarray.go` that causes multiple build failures. To avoid them, add the following header in these files
 
     ```
     #include <mxnet/c_api.h>
     ```
 
-2. Update the following vendors in Gopkg.lock
+3. Using the upstream vendors causes build failures. So, we tested different versions for these vendors to find the compatible ones and came up with the following configuration for Gopkg.lock.
+
 
     ```
     [[projects]]
@@ -149,9 +158,15 @@ Use this guide to install MXNet agent on zLinux (s390x architecture). Tested on 
 
 ## Installing MXNet agent
 
-1. Use the files `go-mxnet/mxnet/error.go`, `go-mxnet/mxnet/predictor.go`, `go-mxnet/mxnet/ndarray.go` that we fixed earlier while building go-mxnet and update them in vendor/github.com/rai-project/go-mxnet/mxnet/ directory.
+1. Get the MXNet Agent
 
-2. Update the following vendors in Gopkg.lock
+   ```
+   go get https://github.com/rai-project/mxnet
+   ```
+
+2. Use the files `go-mxnet/mxnet/error.go`, `go-mxnet/mxnet/predictor.go`, `go-mxnet/mxnet/ndarray.go` that we fixed earlier for `rai-project/go-mxnet` while building `go-mxnet` and update them in `vendor/github.com/rai-project/go-mxnet/mxnet/` directory.
+
+3. Using the upstream vendors causes build failures. So, we tested different versions for these vendors to find the compatible ones and came up with the following configuration for Gopkg.lock.
 
     ```
     [[projects]]
@@ -185,13 +200,13 @@ Use this guide to install MXNet agent on zLinux (s390x architecture). Tested on 
     version = "v0.9.0"
     ```
 
-3. Install the project dependencies using 
+4. Install the project dependencies using 
 
     ```
     dep ensure -vendor-only -v
     ```
 
-4. Build and install the agent using the following commands
+5. Build and install the agent using the following commands
 
     ```
     go build -tags=nogpu -a -installsuffix cgo
