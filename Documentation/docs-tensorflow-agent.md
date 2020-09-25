@@ -144,7 +144,7 @@ MlModelScope uses chewxy/math32 package as a dependency but it fails to work on 
    go get https://github.com/rai-project/tensorflow
    ```
 
-2. Using the upstream vendors on IBM Z causes build failures. So, tested different versions fo rthese vendors and came up with the following configuration for Gopkg.lock.
+2. Using the upstream vendors causes build failures. So, we tested different versions for these vendors to find the compatible ones and came up with the following configuration for Gopkg.lock.
 
     ```
     [[projects]]
@@ -184,7 +184,7 @@ MlModelScope uses chewxy/math32 package as a dependency but it fails to work on 
     dep ensure -vendor-only -v
     ```
 
-3. Build and install the agent using the following commands
+4. Build and install the agent using the following commands
 
     ```
     cd tensorflow-agent
