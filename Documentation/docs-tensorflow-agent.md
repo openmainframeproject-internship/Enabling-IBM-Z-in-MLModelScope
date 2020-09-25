@@ -1,6 +1,6 @@
 # Installation guide for Tensorflow Agent
 
-Use this guide to install Tensorflow agent on zLinux (s390x architecture). Tested on `Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-96-generic s390x)`
+Use this guide to install Tensorflow agent on zLinux (s390x architecture). Tested on `Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-96-generic s390x)`. Tested on Ubuntu 18.04 [docker image](https://hub.docker.com/r/s390x/ubuntu/) for s390x.
 
 ## Installing dependencies
 
@@ -29,7 +29,7 @@ Use this guide to install Tensorflow agent on zLinux (s390x architecture). Teste
     apt-get install libopenblas-dev liblapack-dev libjemalloc-dev
     ```
 
-2. These packages are installed in `/usr/lib/s390x-linux-gnu` directory by default but MXNet is not configured for s390x and requires the archive libraries and shared object files to be present in `/usr/lib`. So, we need to create symbolic link for these files -
+2. These packages are installed in `/usr/lib/s390x-linux-gnu` directory by default but Tensorflow is not configured for s390x and so it requires the archive libraries and shared object files to be present in `/usr/lib`. Therefore, we need to create symbolic link for these files -
 
     ```
     ln -s /usr/lib/s390x-linux-gnu/libjemalloc.a /usr/lib/libjemalloc.a 
@@ -51,6 +51,8 @@ Use this guide to install Tensorflow agent on zLinux (s390x architecture). Teste
 
 
 ## Installing Tensorflow C library
+
+The process to install and configure Tensorflow for s390x is documented by IBM [here](https://github.com/linux-on-ibm-z/docs/wiki/Building-TensorFlow). Taking reference from these [scripts](https://github.com/linux-on-ibm-z/scripts/tree/master/Tensorflow), we have tested the following instructions to install Tensorflow 1.14 successfully on Z.
 
 1. Install bazel-0.26.1 
 
@@ -74,7 +76,7 @@ Use this guide to install Tensorflow agent on zLinux (s390x architecture). Teste
     mkdir tensorflow
     cd tensorflow
 
-    git clone --single-branch --depth 1 --branch $FRAMEWORK_VERSION --recursive https://github.com/tensorflow/tensorflow tensorflow
+    git clone --single-branch --depth 1 --branch 1.14.1 --recursive https://github.com/tensorflow/tensorflow tensorflow
 
     git checkout r1.14
     ```
@@ -103,6 +105,7 @@ Use this guide to install Tensorflow agent on zLinux (s390x architecture). Teste
 4. Set shared libraries
 
     ```
+        # Creating symlinks for Tensoflow binaries and shared object files
 	ls -la ~/tensorflow/tensorflow/bazel-bin/tensorflow
 	cp ~/tensorflow/tensorflow/bazel-bin/tensorflow/libtensorflow.so.1.14.1 /usr/local/lib/libtensorflow.so
 	ln -s /usr/local/lib/libtensorflow.so /usr/local/lib/libtensorflow.so.1
@@ -125,7 +128,7 @@ Use this guide to install Tensorflow agent on zLinux (s390x architecture). Teste
     go get -d github.com/tensorflow/tensorflow/tensorflow/go
     ```
 
-2. Build and test
+2. Build and test the bindings
 
     ```
     go generate github.com/tensorflow/tensorflow/tensorflow/go/op
@@ -134,7 +137,15 @@ Use this guide to install Tensorflow agent on zLinux (s390x architecture). Teste
 
 ## Installing Tensorflow agent
 
-1. Update the following vendors in Gopkg.lock
+MlModelScope uses chewxy/math32 package as a dependency but it fails to work on Z. So, we pushed a fix to make it work on s390x architecture. The details about this change is available here [here](https://github.com/openmainframeproject-internship/Enabling-IBM-Z-in-MLModelScope/tree/master/src/math32).
+
+1. Get the Tensorflow Agent package
+
+   ```
+   go get https://github.com/rai-project/tensorflow
+   ```
+
+2. Using the upstream vendors on IBM Z causes build failures. So, tested different versions fo rthese vendors and came up with the following configuration for Gopkg.lock.
 
     ```
     [[projects]]
@@ -168,7 +179,7 @@ Use this guide to install Tensorflow agent on zLinux (s390x architecture). Teste
     version = "v0.9.0"
     ```
 
-2. Install the project dependencies using 
+3. Install the project dependencies using 
 
     ```
     dep ensure -vendor-only -v
