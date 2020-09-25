@@ -102,10 +102,9 @@ The process to install and configure Tensorflow for s390x is documented by IBM [
 	bazel build --define=tensorflow_mkldnn_contraction_kernel=0 -c opt //tensorflow:libtensorflow.so
     ```
 
-4. Set shared libraries
+4. Create symlinks for Tensoflow binaries and shared object files
 
     ```
-        # Creating symlinks for Tensoflow binaries and shared object files
 	ls -la ~/tensorflow/tensorflow/bazel-bin/tensorflow
 	cp ~/tensorflow/tensorflow/bazel-bin/tensorflow/libtensorflow.so.1.14.1 /usr/local/lib/libtensorflow.so
 	ln -s /usr/local/lib/libtensorflow.so /usr/local/lib/libtensorflow.so.1
