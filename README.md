@@ -28,6 +28,6 @@ a better understanding of the problems you encountered during the developmemnt o
 - [x] Mid-term Evaluation (by mentor)
 - [x] Code Project (with comments)
 - [x] Testing
-- [ ] Video Presentation of the Project
+- [x] Video Presentation of the Project
 - [ ] Final Evaluation (by mentor)
 - [ ] 3rd Stipend Released
