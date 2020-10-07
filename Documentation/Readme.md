@@ -6,3 +6,5 @@
 | Detailed Design | Identify modules making up each component.  data flows between modules.  Also ERDs and other documentation depending upon technologies used |
 | Installation Guide| How to install and configure the project |
 | User Guide | Any user interface instructions |
+
+Link to the project presentation video - https://drive.google.com/file/d/1IJAhrPPe5xes_dLR-t20XMqyI25Y2lml/view?usp=sharing
