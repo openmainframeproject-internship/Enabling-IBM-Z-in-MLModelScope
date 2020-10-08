@@ -29,5 +29,5 @@ a better understanding of the problems you encountered during the developmemnt o
 - [x] Code Project (with comments)
 - [x] Testing
 - [x] Video Presentation of the Project
-- [ ] Final Evaluation (by mentor)
+- [x] Final Evaluation (by mentor)
 - [ ] 3rd Stipend Released
